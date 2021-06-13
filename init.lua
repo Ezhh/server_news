@@ -75,9 +75,7 @@ local function get_news_contents ()
 end
 
 local function set_news_contents (news)
-	local news_file = io.open(file_path, "w")
-	news_file:write(news)
-	news_file:close()
+	minetest.safe_file_write(file_path, news)
 end
 
 -- create formspec from text file
@@ -203,9 +201,7 @@ if news_backup_enabled then
 		func = function (name, line)
 			local news = get_news_contents()
 
-			local backup_file = io.open(file_path..".backup", "w")
-			backup_file:write(news)
-			backup_file:close()
+			minetest.safe_file_write(file_path..".backup", news)
 		end
 	})
 end
