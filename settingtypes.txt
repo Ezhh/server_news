@@ -1,0 +1,18 @@
+# The news file name / path
+news.file_name (The file the news willbe read from and written to) string news.txt
+
+# Permission to bypass news
+news.bypass_permission (Bypass news: Required privs) string news_bypass
+
+# Permission to edit news
+news.edit_permission (Edit news: Required privs) string news_edit
+
+# Permission to backup news
+news.backup_permission (Backup news: Required privs) string news_backup
+
+# Enable new editing features
+news.edit_enabled (Editing news allowed) bool false
+news.add_enabled (Adding news lines allowed) bool false
+news.delete_enabled (Deleting news lines allowed) bool false
+news.backup_enabled (Backing up news allowed) bool false
+news.restore_enabled (Restoring news backups allowed) bool false
